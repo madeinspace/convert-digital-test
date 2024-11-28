@@ -1,50 +1,61 @@
-# React + TypeScript + Vite
+# React Search Bar with API Integration
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a technical test for Convert Digital, it implements a React-based search bar component that interacts with the API:
+https://dummyjson.com/products/search?q=[x]
 
-Currently, two official plugins are available:
+The search bar allows users to search for products by keyword and displays results in a dropdown list with relevant product details.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Dynamic Search:** Fetches results from the API based on the user’s input.
+- **Debouncing:** Optimized API calls to prevent excessive requests during typing.
+- **Dropdown Display:** Shows product results with a grid layout including images, titles, and prices.
+- **Responsive Design:** Uses **Tailwind CSS** for a simple and responsive layout.
+- **Testing:** Includes unit tests.
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Project Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/madeinspace/convert-digital-test
+cd convert-digital-test
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. Install Dependencies
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Ensure you have Node.js installed. Then, run:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
 ```
+
+### 3. Run the Application
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+### 4. Testing the Application
+
+This project uses Vitest and React Testing Library for unit and integration tests.
+
+Run Tests:
+
+```bash
+npm run test
+```
+
+### 5. Technologies Used
+
+    •	Vite: Development and build tooling.
+    •	React: Component-based UI development.
+    •	Tailwind CSS: For styling.
+    •	Vitest: Testing framework.
+    •	React Testing Library.
