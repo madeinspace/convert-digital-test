@@ -1,7 +1,14 @@
 {
+  "compilerOptions": {
+    "types": ["vitest", "vite/client"], // Add Vitest and Vite types
+    "composite": true, // Enable project references
+    "moduleResolution": "node", // Ensure proper resolution for modules
+    "skipLibCheck": true, // Skip library type checks (optional)
+    "strict": true // Enable strict type-checking
+  },
   "files": [],
   "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+    { "path": "./tsconfig.app.json" }, // Reference to the application config
+    { "path": "./tsconfig.node.json" } // Reference to the Node.js-specific config
   ]
 }
